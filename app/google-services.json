@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "230372918484",
+    "project_id": "authfirebasekot",
+    "storage_bucket": "authfirebasekot.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230372918484:android:b158fc063b37787f376741",
+        "android_client_info": {
+          "package_name": "com.kduarte.authfirebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTzmfSFPJ09iiwvMPvZ0B0pOBMF8OdeUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
