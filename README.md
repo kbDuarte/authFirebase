@@ -23,13 +23,6 @@ Camilla dos Santos Fernandes Silvestre - 240249
 - Firebase BoM 35.1.0
 - Material Components
 
-## Configuração
-O arquivo `app/google-services.json` deste projeto corresponde ao aplicativo Android registrado no Firebase com o identificador `com.kduarte.authfirebase`.
-
-1. Abra o projeto no Android Studio e sincronize o Gradle.
-2. No Firebase Console, acesse **Authentication > Método de login** e habilite **E-mail/senha**.
-3. Execute o aplicativo.
-
 ## Documentação
 - [FirebaseUI Auth para Android](https://firebase.google.com/docs/auth/android/firebaseui?hl=pt-br)
 - [Configurar o Firebase em apps Android](https://firebase.google.com/docs/android/setup)
