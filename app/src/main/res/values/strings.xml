@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AuthFirebase</string>
+    <string name="home_title">Login realizado!</string>
+    <string name="welcome_default">Bem-vindo(a)!</string>
+    <string name="welcome_user">Olá, %1$s</string>
+    <string name="logout">Sair</string>
+</resources>
