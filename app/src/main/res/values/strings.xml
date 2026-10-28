@@ -4,4 +4,6 @@
     <string name="welcome_default">Bem-vindo(a)!</string>
     <string name="welcome_user">Olá, %1$s</string>
     <string name="logout">Sair</string>
+    <string name="login_prompt">Entre ou crie uma conta para continuar.</string>
+    <string name="login_again">Entrar ou cadastrar</string>
 </resources>
