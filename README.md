@@ -2,6 +2,12 @@
 
 Aplicativo Android de exemplo com autenticação usando FirebaseUI Auth.
 
+Feito por: 
+
+Kauan Borges Duarte - 243951 
+E
+Camilla dos Santos Fernandes Silvestre - 240249
+
 ## Funcionalidades
 - Exibe a tela de autenticação quando não há sessão ativa.
 - Permite entrar com e-mail e senha.
