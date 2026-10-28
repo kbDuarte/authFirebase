@@ -14,16 +14,16 @@ Aplicativo Android de exemplo com autenticação usando FirebaseUI Auth.
 - Android View Binding
 - Firebase Authentication
 - FirebaseUI Auth
+- Firebase BoM 35.1.0
 - Material Components
 
-## Configuração do Firebase
-1. Abra o [Firebase Console](https://console.firebase.google.com/) e crie ou selecione um projeto.
-2. Registre um aplicativo Android com o ID `com.kduarte.authfirebase`.
-3. Baixe o arquivo `google-services.json` e coloque-o na pasta `app/`.
-4. No Firebase Console, acesse **Authentication > Método de login** e habilite **E-mail/senha**.
-5. Abra o projeto no Android Studio, sincronize o Gradle e execute o aplicativo.
+## Configuração
+O arquivo `app/google-services.json` deste projeto corresponde ao aplicativo Android registrado no Firebase com o identificador `com.kduarte.authfirebase`.
 
-> O arquivo `google-services.json` não está incluído neste repositório porque é específico do projeto Firebase. O login depende desse arquivo e da ativação do provedor E-mail/senha.
+1. Abra o projeto no Android Studio e sincronize o Gradle.
+2. No Firebase Console, acesse **Authentication > Método de login** e habilite **E-mail/senha**.
+3. Execute o aplicativo.
 
 ## Documentação
 - [FirebaseUI Auth para Android](https://firebase.google.com/docs/auth/android/firebaseui?hl=pt-br)
+- [Configurar o Firebase em apps Android](https://firebase.google.com/docs/android/setup)
