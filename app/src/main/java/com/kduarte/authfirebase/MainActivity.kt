@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
                 "Não foi possível entrar. Verifique os dados e tente novamente."
             }
             Toast.makeText(this, message, Toast.LENGTH_LONG).show()
-            // O usuário pode tentar novamente ao abrir o fluxo de login.
+            showLoginFallback()
         }
     }
 
@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.btnLogout.setOnClickListener { signOut() }
+        binding.btnLogin.setOnClickListener { launchSignIn() }
 
         if (FirebaseAuth.getInstance().currentUser == null) {
             launchSignIn()
@@ -46,6 +47,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun launchSignIn() {
+        binding.homeContent.visibility = View.GONE
+        binding.loginContent.visibility = View.GONE
+
         val providers = arrayListOf(
             AuthUI.IdpConfig.EmailBuilder().build()
         )
@@ -59,8 +63,14 @@ class MainActivity : AppCompatActivity() {
         signInLauncher.launch(signInIntent)
     }
 
+    private fun showLoginFallback() {
+        binding.homeContent.visibility = View.GONE
+        binding.loginContent.visibility = View.VISIBLE
+    }
+
     private fun showHome() {
         val user = FirebaseAuth.getInstance().currentUser
+        binding.loginContent.visibility = View.GONE
         binding.tvWelcome.text = getString(
             R.string.welcome_user,
             user?.email ?: "usuário"
@@ -71,10 +81,13 @@ class MainActivity : AppCompatActivity() {
     private fun signOut() {
         AuthUI.getInstance()
             .signOut(this)
-            .addOnCompleteListener {
-                binding.homeContent.visibility = View.GONE
-                Toast.makeText(this, "Você saiu da sua conta.", Toast.LENGTH_SHORT).show()
-                launchSignIn()
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+                    Toast.makeText(this, "Você saiu da sua conta.", Toast.LENGTH_SHORT).show()
+                    launchSignIn()
+                } else {
+                    Toast.makeText(this, "Não foi possível sair. Tente novamente.", Toast.LENGTH_LONG).show()
+                }
             }
     }
 }
